@@ -1,0 +1,6 @@
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <%= content_tag :div, msg, :class => "flash_#{name}" %>
+    <!-- content_tag is a helper to create HTML div -->
+  <% end %>
+<% end %>

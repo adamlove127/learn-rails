@@ -47,5 +47,6 @@ gem 'i18n', '~>0.7.0'
 group :development do
 	gem 'better_errors'
 	gem 'quiet_assets'
-	gem 'rails_layout'
+	#gem 'rails_layout'
+	gem 'rails_layout', '~> 1.0.24'
 end

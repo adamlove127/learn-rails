@@ -1,4 +1,4 @@
-class Example < Object
+class Example < Object #everything inherits from object, therefore redundant 
 
 	#this is a comment
 
