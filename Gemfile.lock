@@ -241,7 +241,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   compass-rails (~> 2.0.alpha.0)
-  figaro
+  figaro (~> 1.1.0)
   gibbon
   google_drive (~> 1.0.0)
   high_voltage
