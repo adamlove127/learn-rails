@@ -38,7 +38,7 @@ end
 gem 'activerecord-tableless'
 gem 'compass-rails', '~> 2.0.alpha.0'
 gem 'figaro', '~> 1.1.0'
-gem 'gibbon'
+gem 'gibbon', '~> 0.4.6'
 gem 'google_drive', '~> 1.0.0'
 gem 'high_voltage'
 gem 'simple_form'
