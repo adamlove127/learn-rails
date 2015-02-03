@@ -28,12 +28,12 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com"
+    address: "smtp.gmail.com",
     port: 587,
-    domain: ENV["DOMAIN_NAME"]
-    authentication: "plain"
+    domain: ENV["DOMAIN_NAME"],
+    authentication: "plain",
     enable_startls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"]
+    user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
 
