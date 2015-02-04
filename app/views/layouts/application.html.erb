@@ -2,42 +2,21 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- viewport metatag improves presentation of webpage on mobile devices -->
     <title><%= content_for?(:title) ? yield(:title) : "Learn Rails" %></title>
-<!-- title tags make webpage search engine friendly, -->
-<!-- if the content_for(:title) is present in view file, use it, else display learn rails -->
-
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Learn Rails" %>">
-<!-- rails created default title and description based on project name -->
-
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <!-- Assest Pipeline -> tags add CSS & javascript -->
-    <!-- two folders: app/assest/javascripts/ && app/assests/stylesheets -->
-    <!-- No need to modify application layout file every time create CSS file -->
-
-
+    <%# Modernizr is required for Zurb Foundation %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <header>
       <%= render 'layouts/navigation' %>
-
-      <!-- Partials -->
-      <!-- similar to view file - beings w/ '_' -->
-      <!-- app/views/layouts/_footer.html.erb -->
-      <!-- use 'render' to insert partial -->
-      <!-- <#= render 'layouts/footer' %> -->
-
-<!-- partials can be nested -->
-
     </header>
-    <main role="main"> 
-    	<!-- role = "main" -> needed for browsers that don't recognise <main> -->
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
     </main>
-    <!-- The main content area of a doc includes content that is unique to that document and excludes content that is repeated across a set of docs such as site nav links, cpright info, logos etc -->
   </body>
 </html>
